@@ -5,26 +5,21 @@ const Projects = require('./model')
 router.get('/', async (req, res, next) => {
     try {
         const data = await Projects.getAll()
+
         
-        const transformedData = data.map(x => {
-            const completed = () => {
-                if(x.project_completed == 1) {
-                    return 'true'
-                }
-                else {
-                    return 'false'
-                }
-            }
-            return {
-                project_id: x.project_id,
-                project_name: x.project_name,
-                project_description: x.project_description,
-                project_completed: completed
-            }
-        })
-        res.json(transformedData)
+        res.json(data)
         
     }
+    catch (err) {
+        next(err)
+    }
+})
+
+router.post('/', async (req, res, next) => {
+    try {
+        const data = await Projects.create(req.body)
+        res.json(data)
+    }   
     catch (err) {
         next(err)
     }
