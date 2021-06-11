@@ -26,11 +26,11 @@ In this project you will be given a set of requirements and must design a databa
 
 ### Files to Complete
 
-1. `index.js`
+1. `index.js` xx
 2. `api/server.js`
 3. `model.js` inside `api/project`, `api/resource` and `api/task`
 4. `router.js` inside `api/project`, `api/resource` and `api/task`
-5. migration file(s)
+5. migration file(s) xx
 6. seed file(s) **optional**
 
 ### Required Dependencies
@@ -78,11 +78,11 @@ Build an API inside the `api` folder with endpoints for:
 - [ ] `[GET] /api/resources`
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-- [ ] `[POST] /api/projects`
+- [x ] `[POST] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-- [ ] `[GET] /api/projects`
+- [x ] `[GET] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
